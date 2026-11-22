@@ -1,0 +1,11 @@
+.hero-name {
+  margin-bottom: 14px;
+  color: #0d263a;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-weight: 850;
+  letter-spacing: .14em;
+}
+
+@media (max-width: 560px) {
+  .hero-name { font-size: .92rem; letter-spacing: .1em; }
+}
