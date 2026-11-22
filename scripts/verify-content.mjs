@@ -5,5 +5,6 @@ const links=['https://amer1997000.github.io/ai-business-research-dashboard/','ht
 for(const value of [...projects,...links]) if(!source.includes(value)) throw new Error(`Missing required portfolio content: ${value}`)
 for(const section of ['home','about','projects','skills','contact']) if(!source.includes(`id="${section}"`)) throw new Error(`Missing navigation section: ${section}`)
 for(const value of ['AMIR MOHAMMED SHAFI','https://www.linkedin.com/in/amir-shafi1','mailto:amirshafi214@gmail.com','https://github.com/Amer1997000']) if(!source.includes(value)) throw new Error(`Missing verified identity or contact: ${value}`)
+if(!source.includes('Five interactive business applications demonstrating practical solutions in operations, sales, procurement, budgeting, and business analytics.')) throw new Error('Required homepage positioning is missing')
 if(/(?:\+?966|05\d{8})/.test(source)) throw new Error('Phone number must not be published')
 console.log(`Verified ${projects.length} projects, ${links.length} project links, and 5 navigation sections.`)
